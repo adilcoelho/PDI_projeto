@@ -1,7 +1,10 @@
-function y = novelErosion(x)
+function y = novelErosion(image)
 
-if sum(x(:)) > size(x,1)
-    y = 1;
-else 
+sum_of_ones = sum(image(:));
+
+size_of_image = size(image);
+if (sum_of_ones > size_of_image(1))
     y = 0;
+else
+    y = image(1,1);
 end
